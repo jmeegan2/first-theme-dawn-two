@@ -1,5 +1,5 @@
-{% section 'announcement-bar' %}
- {%- if section.settings.home_page_only == false or template.name == 'index' -%}
+{%- if section.settings.show_announcement -%}
+  {%- if section.settings.home_page_only == false or template.name == 'index' -%}
 
     {%- if section.settings.link == blank -%}
       <div>
@@ -27,6 +27,7 @@
       "id": "show_announcement",
       "label": "Show announcement",
       "default": false
+      
     },
     {
       "type": "checkbox",

@@ -1,6 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
 <head>
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -41,6 +42,7 @@
     {%- if current_tags -%}
       {%- assign meta_tags = current_tags | join: ', ' -%} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags -}}
     {%- endif -%}
+    
     {%- if current_page != 1 -%}
       &ndash; {{ 'general.meta.page' | t: page: current_page }}
     {%- endif -%}
@@ -77,6 +79,7 @@
   <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}" type="text/css" media="print" onload="this.media='all';onLoadStylesheet()">
 
   <style>
+  
     {{ header_font | font_face: font_display: 'swap' }}
     {{ base_font | font_face: font_display: 'swap' }}
     {{ base_font_bold | font_face: font_display: 'swap' }}
@@ -86,6 +89,8 @@
   </style>
 
   <script>
+  {% section 'announcement-bar'  %}
+  
     var theme = {
       breakpoints: {
         medium: 750,
