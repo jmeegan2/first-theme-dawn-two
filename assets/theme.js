@@ -6,7 +6,7 @@ window.theme = window.theme || {};
 theme.Sections = function Sections() {
   this.constructors = {};
   this.instances = [];
-  
+
   document.addEventListener(
     'shopify:section:load',
     this._onSectionLoad.bind(this)
